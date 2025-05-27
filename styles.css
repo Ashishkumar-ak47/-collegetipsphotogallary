@@ -1,0 +1,140 @@
+/* General reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #f9f8fc, #fff0f5);
+  color: #333;
+  overflow-x: hidden;
+}
+
+header.hero {
+  background: linear-gradient(120deg, #ff4e50, #f9d423);
+  padding: 3rem 1rem;
+  text-align: center;
+  color: white;
+  animation: fadeInDown 1s ease-out;
+}
+
+header.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+nav {
+  background: #292929;
+  text-align: center;
+  padding: 1rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #f9d423;
+}
+
+main {
+  padding: 2rem;
+}
+
+.gallery-section {
+  margin-bottom: 4rem;
+  animation: fadeInUp 1s ease forwards;
+}
+
+.gallery-section h2 {
+  text-align: center;
+  color: #ff4e50;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  text-shadow: 1px 1px 0 #fff;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.grid img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
+}
+
+.grid img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+}
+
+/* Lightbox */
+#lightbox {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.9);
+  justify-content: center;
+  align-items: center;
+}
+
+#lightbox img {
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 10px;
+  box-shadow: 0 0 20px #fff;
+}
+
+#close {
+  position: absolute;
+  top: 30px;
+  right: 50px;
+  font-size: 3rem;
+  color: white;
+  cursor: pointer;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  background-color: #292929;
+  color: #fff;
+  padding: 1.5rem;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  from { transform: translateY(-30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from { transform: translateY(30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
